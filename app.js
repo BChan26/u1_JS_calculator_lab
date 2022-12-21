@@ -16,40 +16,33 @@ document.querySelector(`.clearButton`).addEventListener('click', () => {
 //Code needs end the math with = to calculate
 //Code needs to display result in output
 
-let array = []
-let inputNumbers = document.querySelectorAll(`.number`)
-let inputMath = document.querySelectorAll(`.math`)
-let inputEqualTo = document.querySelector(`.answer`)
+let arrayNumber = []
+let arrayMath = []
+// let inputNumbers = document.querySelectorAll(`.number`)
+// let inputMath = document.querySelectorAll(`.math`)
+// let inputEqualTo = document.querySelector(`.answer`)
 
 let cell = document.querySelectorAll(`.cell-number`)
-//
+
 for (let i=0; i<cell.length; i++){
     cell[i].addEventListener('click', (event) => {
     // console.log(`Please please work I'm so tired ${i}`)
 let selectedNumber = event.currentTarget.innerText 
     console.log(selectedNumber)
-    array.push(selectedNumber)
-    console.log(array)
+    arrayNumber.push(selectedNumber)
+    console.log(arrayNumber)
     })
 }
 
+let math = document.querySelectorAll(`.cell-math`)
+for (let i=0; i<math.length; i++) {
+    math[i].addEventListener('click', (event) => {
+let selectedMath = event.currentTarget.innerText
+    console.log(selectedMath)
+    arrayMath.push(selectedMath)
+    console.log(arrayMath)
+    })
+}
 
-
-
-
-
-console.log(cell)
-
-// const button = document.getElementsByClassName(`cell`)
-// button.addEventListener('click', () => {
-//     console.log(`Element clicked through function`)
-// })
-
-// addEventListener(`click`, console.log(`hello`))
-
-// input.forEach(button => {
-//     button.addEventListener(`click`, function getValue({
-//         currentTarget.innerText = arrayNewValue
-//         array.push(arrayNewValue)}
-// )})
-
+let equal = document.querySelector(`.cell-answer`)
+equal.addEventListener
